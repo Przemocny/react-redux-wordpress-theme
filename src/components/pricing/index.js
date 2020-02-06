@@ -80,14 +80,6 @@ const Pricing = props => {
             </div>
           </div>
         </div>
-        <div className='container-fluid cv'>
-          <div className='container'>
-            <h3>
-              We can also help you with improving CV and upgrade your Github
-              portfolio<br/>select "CV improvement" in contact form
-            </h3>
-          </div>
-        </div>
       </div>
     )
     return null

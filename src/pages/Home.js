@@ -1,6 +1,5 @@
 import React from 'react'
-import {ContactForm, Attention1, Attention2, Why, Pillars, About, Help, Paths, HowToStart,
-        Testimonials, Mentors, Pricing, 
+import {ContactForm, Attention1, Help, Pricing, 
       } from '../components'
 
 const getHomeData = pages => {
@@ -14,16 +13,8 @@ const Home = ({ pages }) => {
     return (
       <div className='anim-view container-fluid no-pm'>
         <Attention1 />
-        {/* <Attention2 />
-        <Why />
-        <Pillars />
-        <About />
         <Help />
-        <Paths />
-        <HowToStart />
-        <Testimonials />
-        <Mentors />
-        <Pricing /> */}
+        <Pricing />
         <ContactForm />
       </div>
     )

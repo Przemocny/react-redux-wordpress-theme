@@ -68,15 +68,7 @@ const Help = props => {
               })}
             </div>
           </div>
-          
         </div>
-        <div className='go-to-blog'>
-            <div className='row justify-content-center'>
-              <Link to="/blog" className='attention-button'>
-                Read more about our standards
-              </Link>
-            </div>
-          </div>
       </div>
     )
   }
