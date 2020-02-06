@@ -1,0 +1,96 @@
+@import '../../styles/global.scss';
+
+.paths{
+    background-color:$cyan;
+    @extend .app-section;
+    .title{
+        color: white;
+        @extend .app-title;
+        &:after{
+            content:'';
+            display:block;
+            margin:40px auto 10px;
+            width:15px;
+            height:15px;
+            border-radius: 50%;
+            background-color:#fff;
+        }
+    }
+
+    .paths-inner{
+        position: relative;
+
+        .row{
+            margin:0;
+            padding:0;
+            position: relative;
+            .wrapper{
+                padding: 0 30px;
+                margin: 30px 0;
+                text-align: center;
+
+                @media (max-width: 992px){
+                    padding: 0 10px;
+                    margin: 10px 0;
+                }
+            }
+        }
+
+        .item {
+            padding: 50px;
+            background-color: $blue;
+            color: #fff;
+            border-radius: 70px;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .title {
+                @extend .app-title;
+                font-size: 18px;
+                margin-bottom: 10px;
+                font-weight: 700;
+                &:after{
+                    content:'';
+                    display:none;
+                }
+            }
+            .label {
+                @extend .app-subtitle;
+                font-size: 14px;
+            }
+        }
+    }
+    
+}
+
+.paths-button {
+    @extend .app-btn;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:auto;
+    display: inline-block;
+    margin-bottom:0;
+    margin-top:30px;
+}
+
+.choice {
+    background-color:#FE4E4E;
+    padding-top:50px;
+    padding-bottom:50px;
+    .title{
+        color: white;
+        text-align: center;
+        @extend .app-title;
+        padding-bottom: 30px;
+    }
+
+    .title2{
+        color: white;
+        @extend .app-subtitle;
+        
+
+    }
+}
