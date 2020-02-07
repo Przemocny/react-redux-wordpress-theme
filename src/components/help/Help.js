@@ -3,31 +3,15 @@ import { connect } from 'react-redux'
 import { actions as appActions } from '../../stores/app'
 import { getHomeData } from '../../common/logic'
 import {Link} from 'react-router-dom'
-import { ReactComponent as ComputerIcon } from './computer-4.svg'
 import { ReactComponent as Laptop11Icon } from './laptop-11.svg'
-import { ReactComponent as Browser32Icon } from './browser-32.svg'
-import { ReactComponent as Laptop3Icon } from './laptop-3.svg'
-import { ReactComponent as Laptop6Icon } from './laptop-6.svg'
-import { ReactComponent as Laptop13Icon } from './laptop-13.svg'
+
 
 import './help.scss'
 
 const Icon = props => {
-  const { name = 'computer-4', width = 200, height = 200 } = props
+  const { name = 'iconname', width = 200, height = 200 } = props
   if (name.includes('laptop-11')) {
     return <Laptop11Icon {...props} />
-  }
-  if (name.includes('browser-32')) {
-    return <Browser32Icon {...props} />
-  }
-  if (name.includes('laptop-3')) {
-    return <Laptop3Icon {...props} />
-  }
-  if (name.includes('laptop-6')) {
-    return <Laptop6Icon {...props} />
-  }
-  if (name.includes('laptop-13')) {
-    return <Laptop13Icon {...props} />
   }
   return null
 }
@@ -59,13 +43,21 @@ const Help = props => {
           <h1 className='title'>{home.help.title}</h1>
           <div className='items'>
             <div className='row justify-content-center'>
-              {home.help.values.map((el, k) => {
-                return (
-                  <div className='col-md-12 col-xs-12' key={k}>
-                    <Item {...el} />
+                  <div className='col-md-12 col-xs-12'>
+                    <Item
+                    icon = {home.help.values.icon}
+                    label ={home.help.values.label}/>
                   </div>
-                )
-              })}
+                  <div className='col-md-12 col-xs-12'>
+                    <Item
+                    icon = {home.help.values.icon}
+                    label ={home.help.values.label}/>
+                  </div>
+                  <div className='col-md-12 col-xs-12'>
+                    <Item
+                    icon = {home.help.values.icon}
+                    label ={home.help.values.label}/>
+                  </div>
             </div>
           </div>
         </div>

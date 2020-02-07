@@ -13,14 +13,14 @@ const Attention1 = props => {
     return (
       <div
         className='attention'
-        id='academy'
-        style={{ backgroundImage: `url(${home.attention1.image}.webp)` }}
+        id='home'
+        style={{ backgroundImage: `url(${home.attention1.image})` }}
       >
         <div className='bg'></div>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-md-8 col-xs-12'>
-              <h1 className='title'>{home.attention1.title}</h1>
+              <h1 className='title'>{home.attention1.title1}</h1>
               <h2 className='title2'>{home.attention1.title2}</h2>
             </div>
           </div>

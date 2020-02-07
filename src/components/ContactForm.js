@@ -39,9 +39,9 @@ const SelectInput = ({
 };
 
 const reasons = [
-  { label: 'Academy', value: 'Academy' },
-  { label: 'CV improvement', value: 'CV improvement' },
-  { label: 'Cooperation', value: 'Cooperation' },
+  { label: 'Reason1', value: 'Reason1' },
+  { label: 'Reason2', value: 'Reason2' },
+  { label: 'Reason3', value: 'Raason3' },
 ];
 
 class ContactForm extends React.Component {
@@ -58,7 +58,6 @@ class ContactForm extends React.Component {
     WPApi.sendMail(this.state.email, this.state.reason).then(({ message }) => {
       this.setState({
         msg: message,
-
         email: '',
         imBusy: false,
       });
