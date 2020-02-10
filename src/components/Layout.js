@@ -9,7 +9,6 @@ const Layout = ({children, menu})=>{
             <div className="app-page">
                 {children}
             </div>
-            <Footer />
         </div>
     )
 }
