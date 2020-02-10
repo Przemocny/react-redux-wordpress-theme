@@ -12,13 +12,18 @@ const Home = ({ pages }) => {
     const [keys, home] = getHomeData(pages)
     return (
       <div className='anim-view container-fluid no-pm'>
-        <Attention1 />
+        test test test 
+        {/* <Attention1 />
         <Attention2 />
         <Help />
-        <ContactForm /> 
+        <ContactForm />  */}
       </div>
     )
   }
   return null
 }
+
+
+
+
 export default Home
