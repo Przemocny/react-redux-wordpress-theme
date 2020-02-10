@@ -45,19 +45,18 @@ const onInit = (store) => {
   ]).then(([pages, posts, {items}, acfPosts])=>{
     // // // work after you fill posts/pages with data in wordpress
 
-    // const postsWithAcf = posts.map((e,k)=>{
-    //   e['acf'] = acfPosts[k].acf
-    //   return e
-    // })
+    const postsWithAcf = posts.map((e,k)=>{
+      e['acf'] = acfPosts[k].acf
+      return e
+    })
 
     // dispatch(successInitialData({
     //   pages, posts:postsWithAcf, menu:items
     // }))
 
-
     // // // code for empty wordpress
     dispatch(successInitialData({
-      pages:[], posts:[], menu:[]
+      pages:pages, posts:postsWithAcf, menu:[]
     }))
   }).catch((err)=>{
     dispatch(failedInitialData(err))
