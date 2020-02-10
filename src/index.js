@@ -27,7 +27,8 @@ const logger = store => next => action => {
 const store = configureStore({
     reducer : {
         App: appReducer,
-    }
+    },
+    middleware:[logger]
 });
 
 const onInit = (store) => {
@@ -42,13 +43,21 @@ const onInit = (store) => {
     WPApi.getMenu(),
     ACFApi.getPosts()
   ]).then(([pages, posts, {items}, acfPosts])=>{
-    const postsWithAcf = posts.map((e,k)=>{
-      e['acf'] = acfPosts[k].acf
-      return e
-    })
+    // // // work after you fill posts/pages with data in wordpress
 
+    // const postsWithAcf = posts.map((e,k)=>{
+    //   e['acf'] = acfPosts[k].acf
+    //   return e
+    // })
+
+    // dispatch(successInitialData({
+    //   pages, posts:postsWithAcf, menu:items
+    // }))
+
+
+    // // // code for empty wordpress
     dispatch(successInitialData({
-      pages, posts:postsWithAcf, menu:items
+      pages:[], posts:[], menu:[]
     }))
   }).catch((err)=>{
     dispatch(failedInitialData(err))
