@@ -17,15 +17,16 @@ class App extends React.Component {
       <Router>
         <Layout menu={this.props.app.menu}>
           <Route exact path="/">
-            <Home pages={this.props.app.pages}/>
+            <Home pages={this.props.app.pages} slug=""/>
           </Route>
+          {/*
           <Route exact path="/blog">
             <Blog posts={this.props.app.posts}/>
           </Route>
           <Route exact path="/blog/:slug">
             <Post posts={this.props.app.posts}/>
-        </Route>
-          
+          </Route>
+          */}
         </Layout>
       </Router>
     );

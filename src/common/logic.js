@@ -1,7 +1,10 @@
-const getHomeData = (pages, lang = 'pl') => {
-	const slug = lang == 'pl' ? 'home' : 'home-en'
-	const home = pages.filter((e) => e.slug == slug)[0]['acf']
-	return [Object.keys(home), home]
+const getPageData = (pages, slug="") => {
+	if(slug === ""){
+		return pages[0]
+	}
+	else{
+		return pages.filter((e) => e.slug == slug)[0]
+	}
 }
 
-export { getHomeData }
+export { getPageData }

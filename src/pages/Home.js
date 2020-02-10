@@ -1,25 +1,23 @@
-import React from 'react'
-import {ContactForm, Attention1, Attention2, Help, Pricing, ReadMe,
-      } from '../components'
+import React, {useEffect}from 'react'
+import {ReadMe} from '../components'
+import {getPageData} from '../common/logic'
 
-const getHomeData = pages => {
-  const home = pages.filter(e => e.slug == 'home-en')[0]['acf']
-  return [Object.keys(home), home]
-}
-
-const Home = ({ pages }) => {
-  if (pages.length !== 0) {
-    const [keys, home] = getHomeData(pages)
-    return (
-      <div className='anim-view container-fluid no-pm'>
-        <ReadMe />
-      </div>
-    )
+class Home extends React.Component {
+  state = {
+    page:{},
   }
-  return null
+  componentWillMount(){
+    const {pages, slug=""} = this.props
+    const page = getPageData(pages, slug)
+    this.setState({ page })
+  }
+  render(){
+    const {page} = this.state
+    return <div className='anim-view container-fluid no-pm'>
+      {/*JSON.stringify(page)*/}
+      <ReadMe />
+  </div>
+  }
 }
-
-
-
 
 export default Home
