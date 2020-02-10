@@ -41,7 +41,7 @@ const onInit = (store) => {
     WPApi.getPosts(),
     WPApi.getMenu(),
     ACFApi.getPosts()
-  ]).then(([pages, posts, { items }, acfPosts])=>{
+  ]).then(([pages, posts, {items}, acfPosts])=>{
     const postsWithAcf = posts.map((e,k)=>{
       e['acf'] = acfPosts[k].acf
       return e

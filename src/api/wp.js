@@ -5,8 +5,8 @@ class WPAPI {
         this.getPages = this.getPages.bind(this)
         this.getPosts = this.getPosts.bind(this)
     }
-    getMenu(lang='en', query={}) {
-        const url = `/wp-json/menus/v1/menus/main-${lang}`
+    getMenu(menuSlug='', query={}) {
+        const url = `/wp-json/menus/v1/menus/${menuSlug}`
         const config = {
             method: 'GET',
 			query: query
