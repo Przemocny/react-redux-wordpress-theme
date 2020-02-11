@@ -1,6 +1,5 @@
 import React from 'react';
 import Menu from './Menu'
-import { Footer } from '.';
 
 const Layout = ({children, menu})=>{
     return (

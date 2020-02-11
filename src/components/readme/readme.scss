@@ -30,6 +30,12 @@
         @extend .app-subtitle;
         text-align: left;
         color: black;
+
+        .title{
+            text-align: left;
+            font-size: 20px;
+            font-weight: 600;
+        }
     }
     .list{
         font-size: 18px;
