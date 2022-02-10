@@ -12,7 +12,7 @@
     "customize-cra": "^0.9.1",
     "express": "^4.17.1",
     "express-static-gzip": "^2.0.6",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "preact": "^10.3.0",
     "preact-compat": "^3.19.0",
     "precompress": "^5.1.2",
